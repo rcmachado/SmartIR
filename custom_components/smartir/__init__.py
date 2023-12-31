@@ -22,11 +22,11 @@ DOMAIN = 'smartir'
 VERSION = '1.17.9'
 MANIFEST_URL = (
     "https://raw.githubusercontent.com/"
-    "smartHomeHub/SmartIR/{}/"
+    "rcmachado/SmartIR/{}/"
     "custom_components/smartir/manifest.json")
 REMOTE_BASE_URL = (
     "https://raw.githubusercontent.com/"
-    "smartHomeHub/SmartIR/{}/"
+    "rcmachado/SmartIR/{}/"
     "custom_components/smartir/")
 COMPONENT_ABS_DIR = os.path.dirname(
     os.path.abspath(__file__))
@@ -38,7 +38,7 @@ CONFIG_SCHEMA = vol.Schema({
     DOMAIN: vol.Schema({
         vol.Optional(CONF_CHECK_UPDATES, default=True): cv.boolean,
         vol.Optional(CONF_UPDATE_BRANCH, default='master'): vol.In(
-            ['master', 'rc'])
+            ['master', 'rc', 'beta'])
     })
 }, extra=vol.ALLOW_EXTRA)
 
